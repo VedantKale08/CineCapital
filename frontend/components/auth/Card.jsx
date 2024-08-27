@@ -1,9 +1,11 @@
 import React from "react";
 
-function Card({ data, selectedData }) {
+function Card({ data, selectedData, isSmall }) {
   return (
     <div
-      className={`relative w-44 h-48 rounded-md cursor-pointer overflow-hidden shadow-lg hover:shadow-xl ${
+      className={`relative ${
+        isSmall ? "w-32 h-20" : "w-44 h-48"
+      } rounded-md cursor-pointer overflow-hidden shadow-lg hover:shadow-xl ${
         (selectedData.length > 0) & selectedData.includes(data.id) &&
         "border-4 border-yellow-500"
       }`}
