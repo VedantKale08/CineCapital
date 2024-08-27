@@ -86,12 +86,12 @@ function OnBoarding() {
     {
       id: 1,
       url: "/assets/languages/hindi.png",
-      label: "Hindi",
+      label: "हिन्दी",
     },
     {
       id: 2,
       url: "/assets/languages/marathi.png",
-      label: "Marathi",
+      label: "मराठी",
     },
     {
       id: 3,
@@ -101,32 +101,32 @@ function OnBoarding() {
     {
       id: 4,
       url: "/assets/languages/tamil.png",
-      label: "Tamil",
+      label: "தமிழ்",
     },
     {
       id: 5,
       url: "/assets/languages/404.png",
-      label: "Telugu",
+      label: "తెలుగు", //telugu
     },
     {
       id: 6,
       url: "/assets/languages/english.png",
-      label: "Gujarati",
+      label: "ગુજરાતી",
     },
     {
       id: 7,
       url: "/assets/languages/404.png",
-      label: "Kannada",
+      label: "ಕನ್ನಡ",
     },
     {
       id: 8,
       url: "/assets/languages/tamil.png",
-      label: "Malayalam",
+      label: "മലയാളം",
     },
     {
       id: 9,
       url: "/assets/languages/marathi.png",
-      label: "Marathi",
+      label: "मराठी",
     },
     {
       id: 10,
@@ -139,7 +139,7 @@ function OnBoarding() {
   const [genres, setGenres] = useState([]);
   const [language, setLanguage] = useState([]);
   const [actors, setActors] = useState([]);
- 
+
   const handleGenres = (item) => {
     if (genres.includes(item.id)) {
       setGenres((prev) => prev.filter((genreId) => genreId !== item.id));
@@ -156,9 +156,9 @@ function OnBoarding() {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     setTab(0);
-  },[])
+  }, []);
 
   return (
     <div className="flex justify-center items-center min-h-screen">
