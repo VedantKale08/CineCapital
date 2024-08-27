@@ -16,6 +16,7 @@ module.exports = {
         main: "#0f1014",
         secondary: "#16181f",
         textSecondary: "#8f98b2",
+        blue: "#0954DD",
       },
     },
   },
