@@ -197,7 +197,12 @@ function OnBoarding() {
             <div className="grid grid-cols-5 gap-4">
               {languageArray.map((item, index) => (
                 <div onClick={() => handleLanguage(item)}>
-                  <Card index={index} data={item} selectedData={language} />
+                  <Card
+                    index={index}
+                    data={item}
+                    selectedData={language}
+                    isSmall={true}
+                  />
                 </div>
               ))}
             </div>
