@@ -9,7 +9,7 @@ function Register() {
       <div className="bg-secondary w-[35vw] rounded-xl px-16 py-10 flex flex-col items-center gap-4 border border-slate-800">
         <div className="text-center">
           <p className="text-2xl font-bold">You are almost there!</p>
-          <p className="text-textSecondary text-sm">Let's create a account</p>
+          <p className="text-textSecondary text-sm">Let&apos;s create a account</p>
         </div>
 
         <div className="flex gap-4 w-full">

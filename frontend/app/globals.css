@@ -13,7 +13,7 @@ body {
     background-image: var(--min-gradient);
     min-height: 100vh;
     color: white;
-    padding: 30px 0px 30px 0px;
+/*     padding: 30px 0px 30px 0px; */
 }
 
 .otp div div input {
