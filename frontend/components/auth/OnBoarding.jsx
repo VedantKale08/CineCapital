@@ -135,6 +135,69 @@ function OnBoarding() {
     },
   ];
 
+  const actorsArray = [
+    {
+      id: 1,
+      label: "Amitabh Bachchan",
+      url:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+    },
+    {
+      id: 2,
+      label: "Shah Rukh Khan",
+      url:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+    },
+    {
+      id: 3,
+      label: "Yash",
+      url:
+        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+    },
+    {
+      id: 4,
+      label: "Aamir Khan",
+      url:
+        "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
+    },
+    {
+      id: 5,
+      label: "Yash",
+      url:
+        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+    },
+    {
+      id: 6,
+      label: "Amitabh Bachchan",
+      url:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+    },
+    {
+      id: 7,
+      label: "Aamir Khan",
+      url:
+        "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
+    },
+    {
+      id: 8,
+      label: "Shah Rukh Khan",
+      url:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+    },
+    {
+      id: 9,
+      label: "Yash",
+      url:
+        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+    },
+    {
+      id: 10,
+      label: "Amitabh Bachchan",
+      url:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+    },
+  ];
+
   const [tab, setTab] = useState();
   const [genres, setGenres] = useState([]);
   const [language, setLanguage] = useState([]);
@@ -156,7 +219,15 @@ function OnBoarding() {
     }
   };
 
-  useEffect(() => {
+  const handleActors = (item) => {
+    if (actors.includes(item.id)) {
+      setActors((prev) => prev.filter((actorId) => actorId !== item.id));
+    } else if (actors.length < 3) {
+      setActors((prev) => [...prev, item.id]);
+    }
+  };
+
+  useEffect(()=>{
     setTab(0);
   }, []);
 
@@ -218,19 +289,21 @@ function OnBoarding() {
         )}
 
         {tab == 2 && (
-          <div className="grid grid-cols-5 gap-4">
-            {genreArray.map((item, index) => (
-              <div key={index} onClick={() => handleGenres(item)}>
-                <Card data={item} selectedData={genres} />
-              </div>
-            ))}
+          <>
+            <div className="grid grid-cols-5 gap-4">
+              {actorsArray.map((item, index) => (
+                <div onClick={() => handleActors(item)}>
+                  <Card index={index} data={item} selectedData={actors} />
+                </div>
+              ))}
+            </div>
             {actors.length === 3 && (
               <button className="bg-blue w-[20%] rounded-md py-2.5 mt-5 place-self-end flex justify-center hover:scale-105 transition">
                 Finish
                 <ChevronRight />
               </button>
             )}
-          </div>
+          </>
         )}
       </div>
     </div>
