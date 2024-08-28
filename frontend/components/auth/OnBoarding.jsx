@@ -176,7 +176,7 @@ function OnBoarding() {
             <div className="grid grid-cols-5 gap-4">
               {genreArray.map((item, index) => (
                 <div onClick={() => handleGenres(item)}>
-                  <Card index={index} data={item} selectedData={genres} />
+                  <Card key={index} data={item} selectedData={genres} />
                 </div>
               ))}
             </div>
@@ -198,7 +198,7 @@ function OnBoarding() {
               {languageArray.map((item, index) => (
                 <div onClick={() => handleLanguage(item)}>
                   <Card
-                    index={index}
+                    key={index}
                     data={item}
                     selectedData={language}
                     isSmall={true}
@@ -222,7 +222,7 @@ function OnBoarding() {
           <div className="grid grid-cols-5 gap-4">
             {genreArray.map((item, index) => (
               <div onClick={() => handleGenres(item)}>
-                <Card index={index} data={item} selectedData={genres} />
+                <Card key={index} data={item} selectedData={genres} />
               </div>
             ))}
             {actors.length === 3 && (
