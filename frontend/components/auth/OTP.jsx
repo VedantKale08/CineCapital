@@ -21,7 +21,7 @@ function OTP({ setOTP }) {
           separator={<span>&nbsp;&nbsp;</span>}
         />
         <p className="text-textSecondary text-[12px] mt-2">
-          Didn't receive OTP? <span className="text-blue">Resend OTP</span>
+          Didn&apos;t receive OTP? <span className="text-blue">Resend OTP</span>
         </p>
         <button
           onClick={() => router.push("/auth/register")}
