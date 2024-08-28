@@ -29,7 +29,7 @@ function Sidebar() {
     <div className="p-2 flex flex-col h-screen w-fit">
       <p className="p-6">LOGO</p>
       <div className="flex-1 flex items-center">
-        <ul className="flex flex-col gap-10 group">
+        <ul className="flex flex-col gap-7 group">
           {navItems.map((item, index) => (
             <div
               key={index}
