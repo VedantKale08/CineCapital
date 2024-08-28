@@ -1,9 +1,31 @@
 "use client";
 import React, { useState } from "react";
 import OTP from "./OTP";
+import { getRequest } from "@/config/axiosIntercepter";
+import { sendOtp } from "@/constants/apiEndPoints";
+import classNames from "classnames";
+import toast from "react-hot-toast";
 
 function Login() {
-  const [isOTP, setOTP] = useState(false);
+  const [isOTP, setIsOTP] = useState(false);
+  const [mobileNo, setMobileNo] = useState("");
+  const handleOtp = async () => {
+    console.log(mobileNo);
+    try {
+      const response = await getRequest({
+        url: sendOtp,
+        params: `${mobileNo}`,
+      });
+      const data = response.data;
+      if (data.status) {
+        localStorage.setItem("mobileNo", mobileNo);
+        toast.success(data.message);
+        setIsOTP(true);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="bg-secondary w-[35vw] rounded-xl px-16 py-10 flex flex-col items-center border border-slate-800">
@@ -26,10 +48,12 @@ function Login() {
                   +91
                 </div>
                 <input
-                  type="email"
+                  type="number"
+                  maxLength={10}
                   id="input-label"
                   class="py-3 px-4 block w-full border border-gray-500 rounded-lg text-sm focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none bg-transparent  dark:text-neutral-400 dark:placeholder-neutral-500 "
                   placeholder="Enter mobile number"
+                  onChange={(e) => setMobileNo(e.target.value)}
                 />
               </div>
             </div>
@@ -41,14 +65,18 @@ function Login() {
             </div>
 
             <button
-              onClick={() => setOTP(true)}
-              className="bg-blue w-full rounded-md py-2.5 mt-5 hover:scale-105 transition"
+              onClick={handleOtp}
+              disabled={mobileNo.length == 0}
+              className={classNames(
+                "bg-blue  w-full rounded-md py-2.5 mt-5 hover:scale-105 transition",
+                mobileNo.length != 10 && "bg-opacity-40"
+              )}
             >
               Get OTP
             </button>
           </>
         ) : (
-          <OTP setOTP={setOTP} />
+          <OTP setIsOTP={setIsOTP} userMobileNo={mobileNo} />
         )}
       </div>
     </div>

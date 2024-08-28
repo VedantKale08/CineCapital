@@ -1,12 +1,14 @@
-import OnBoarding from '@/components/auth/OnBoarding'
-import React from 'react'
+import OnBoarding from "@/components/auth/OnBoarding";
+import fetchIntrestCall from "@/lib/getInterests";
+import React from "react";
 
-function Page() {
+export default async function page() {
+  const data = await fetchIntrestCall();
+  const genreData = await data.data.GenresData;
+  const actorsData = await data.data.ActorsData;
   return (
     <div>
-        <OnBoarding/>
+      <OnBoarding genreData={genreData} actorsData={actorsData} />
     </div>
-  )
+  );
 }
-
-export default Page

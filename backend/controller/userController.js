@@ -57,7 +57,6 @@ const loginViaOtp = async (req, res) => {
         to: "+91" + String(mobileNo),
         code: String(otp),
       });
-
     if (verification_check.status === "approved") {
       const alreadyUser = await User.findOne({ mobileNo });
 
@@ -76,13 +75,14 @@ const loginViaOtp = async (req, res) => {
           data: data,
         });
       } else {
-        return res.status(404).send({
+        return res.status(200).send({
+          statusCode: 404,
           status: false,
           message: "User needs to register",
         });
       }
     } else {
-      return res.status(400).send({
+      return res.status(200).send({
         status: false,
         message: "Invalid or expired OTP",
       });

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { ChevronRight } from "lucide-react";
 
-function OnBoarding() {
+function OnBoarding({ genreData, actorsData }) {
   const genreArray = [
     {
       id: 1,
@@ -139,62 +139,52 @@ function OnBoarding() {
     {
       id: 1,
       label: "Amitabh Bachchan",
-      url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
     },
     {
       id: 2,
       label: "Shah Rukh Khan",
-      url:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
     },
     {
       id: 3,
       label: "Yash",
-      url:
-        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+      url: "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
     },
     {
       id: 4,
       label: "Aamir Khan",
-      url:
-        "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
+      url: "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
     },
     {
       id: 5,
       label: "Yash",
-      url:
-        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+      url: "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
     },
     {
       id: 6,
       label: "Amitabh Bachchan",
-      url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
     },
     {
       id: 7,
       label: "Aamir Khan",
-      url:
-        "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
+      url: "https://images.news18.com/ibnlive/uploads/2021/02/1612346460_aamir_khan_4k-2880x1800.jpg",
     },
     {
       id: 8,
       label: "Shah Rukh Khan",
-      url:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+      url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg/220px-Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
     },
     {
       id: 9,
       label: "Yash",
-      url:
-        "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
+      url: "https://m.media-amazon.com/images/M/MV5BNGJlOTljYmQtM2FkYS00YTEyLTliOGItOTA0MzBjZTI3ZDYyXkEyXkFqcGdeQXVyMTQ3Mzk2MDg4._V1_.jpg",
     },
     {
       id: 10,
       label: "Amitabh Bachchan",
-      url:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
+      url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVrThn9BnXE8B70-HRpBkrIFddDzhJ0DnIQw&s",
     },
   ];
 
@@ -227,7 +217,7 @@ function OnBoarding() {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     setTab(0);
   }, []);
 
@@ -238,15 +228,15 @@ function OnBoarding() {
           <p className="text-2xl font-bold">You are almost there!</p>
           <p className="text-textSecondary text-sm">
             Select your 3 favorite{" "}
-            {tab == 0 ? "Genres" : tab == 1 ? "Languages" : "Actors"}
+            {tab === 0 ? "Genres" : tab === 1 ? "Languages" : "Actors"}
           </p>
         </div>
 
-        {tab == 0 && (
+        {tab === 0 && (
           <>
             <div className="grid grid-cols-5 gap-4">
-              {genreArray.map((item, index) => (
-                <div key={index} onClick={() => handleGenres(item)}>
+              {genreData.map((item) => (
+                <div key={item._id} onClick={() => handleGenres(item)}>
                   <Card data={item} selectedData={genres} />
                 </div>
               ))}
@@ -263,16 +253,12 @@ function OnBoarding() {
           </>
         )}
 
-        {tab == 1 && (
+        {tab === 1 && (
           <>
             <div className="grid grid-cols-5 gap-4">
-              {languageArray.map((item, index) => (
-                <div key={index} onClick={() => handleLanguage(item)}>
-                  <Card
-                    data={item}
-                    selectedData={language}
-                    isSmall={true}
-                  />
+              {language.map((item) => (
+                <div key={item.id} onClick={() => handleLanguage(item)}>
+                  <Card data={item} selectedData={language} isSmall={true} />
                 </div>
               ))}
             </div>
@@ -288,12 +274,12 @@ function OnBoarding() {
           </>
         )}
 
-        {tab == 2 && (
+        {tab === 2 && (
           <>
             <div className="grid grid-cols-5 gap-4">
-              {actorsArray.map((item, index) => (
-                <div onClick={() => handleActors(item)}>
-                  <Card index={index} data={item} selectedData={actors} />
+              {actorsData.map((item) => (
+                <div key={item._id} onClick={() => handleActors(item)}>
+                  <Card data={item} selectedData={actors} />
                 </div>
               ))}
             </div>

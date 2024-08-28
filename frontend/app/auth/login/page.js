@@ -1,12 +1,14 @@
-import Login from '@/components/auth/Login'
-import React from 'react'
+import Login from "@/components/auth/Login";
+import { isLoggedIn } from "@/lib/isLoggedIn";
+import React from "react";
 
 function Page() {
+  isLoggedIn();
   return (
     <div>
-        <Login/>
+      <Login />
     </div>
-  )
+  );
 }
 
-export default Page
+export default Page;
