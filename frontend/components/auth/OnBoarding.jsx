@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 function OnBoarding({ genreData, actorsData }) {
   const genreArray = [
@@ -192,6 +193,7 @@ function OnBoarding({ genreData, actorsData }) {
   const [genres, setGenres] = useState([]);
   const [language, setLanguage] = useState([]);
   const [actors, setActors] = useState([]);
+  const router = useRouter();
 
   const handleGenres = (item) => {
     if (genres.includes(item.id)) {
@@ -284,7 +286,10 @@ function OnBoarding({ genreData, actorsData }) {
               ))}
             </div>
             {actors.length === 3 && (
-              <button className="bg-blue w-[20%] rounded-md py-2.5 mt-5 place-self-end flex justify-center hover:scale-105 transition">
+              <button
+                onClick={() => router.push("/home")}
+                className="bg-blue w-[20%] rounded-md py-2.5 mt-5 place-self-end flex justify-center hover:scale-105 transition"
+              >
                 Finish
                 <ChevronRight />
               </button>
