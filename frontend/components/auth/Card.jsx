@@ -1,7 +1,6 @@
 import React from "react";
 
 function Card({ data, selectedData, isSmall }) {
-  console.log(data.url);
   return (
     <div
       className={`relative ${

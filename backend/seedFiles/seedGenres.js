@@ -19,7 +19,7 @@ const genres = [
     name: "Comedy",
     description:
       "Light-hearted and humorous, aimed at making the audience laugh.",
-    url: "https://imgs.search.brave.com/GeWy5iskMJn17Z1H3QG3n1Aqu4RfyScEC_RiZrCnezg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cHJlbWl1bWJlYXQu/Y29tL2Jsb2cvd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDIv/dGhyZWUtc3Rvb2dl/cy5qcGc_dz04NzUm/aD00OTAmY3JvcD0x",
+    url: "https://assets-in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/welcome-et00000113-22-01-2021-06-47-27.jpg",
   },
   {
     name: "Romance",
