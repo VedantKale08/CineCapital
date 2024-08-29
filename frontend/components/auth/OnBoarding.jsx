@@ -197,9 +197,9 @@ function OnBoarding({ genreData, actorsData }) {
 
   const handleGenres = (item) => {
     if (genres.includes(item.id)) {
-      setGenres((prev) => prev.filter((genreId) => genreId !== item.id));
+      setGenres((prev) => prev.filter((genreId) => genreId !== item._id));
     } else if (genres.length < 3) {
-      setGenres((prev) => [...prev, item.id]);
+      setGenres((prev) => [...prev, item._id]);
     }
   };
 
