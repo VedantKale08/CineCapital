@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 :root {
-    --main-color: #0f1014;
-    --min-gradient:linear-gradient(180deg, #081734, #0d1628 73px, #0e1420 168px, #0f1014 256px, #0f1014);
-    --secondary-color: #16181f
+  --main-color: #0f1014;
+  --min-gradient: linear-gradient(
+    180deg,
+    #081734,
+    #0d1628 73px,
+    #0e1420 168px,
+    #0f1014 256px,
+    #0f1014
+  );
+  --secondary-color: #16181f;
 }
 
 /* styles/globals.css */
@@ -15,59 +22,63 @@
 /* styles/globals.css */
 
 body {
-    background-image: var(--min-gradient);
-    min-height: 100vh;
-    color: white;
-    margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrolling if needed */
+  background-image: var(--min-gradient);
+  min-height: 100vh;
+  color: white;
+  margin: 0; /* Remove default margin */
+  /* overflow: hidden;  */
 }
 
 .overlay-container {
-    position: relative;
-    overflow: hidden; /* Ensure no overflow issues */
+  position: relative;
+  overflow: hidden; /* Ensure no overflow issues */
 }
 
 .overlay-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(35deg, rgba(0, 0, 0, 0) 40%, rgba(15, 16, 20, 1) 60%);
-    pointer-events: none; /* Ensure the overlay does not interfere with interactions */
-    z-index: 1; /*Ensure the overlay is below the random text but above the grid content */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    35deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(15, 16, 20, 1) 60%
+  );
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+  z-index: 1; /*Ensure the overlay is below the random text but above the grid content */
 }
 
 .content {
-    position: relative;
-    z-index: 0; /* Ensure content is below the overlay */
+  position: relative;
+  z-index: 0; /* Ensure content is below the overlay */
 }
 
 .randomTextContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Prevents interaction with the overlay text */
-    z-index: 2; /* Ensure it's above the overlay but below other content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevents interaction with the overlay text */
+  z-index: 2; /* Ensure it's above the overlay but below other content */
 }
 
 .randomText {
-    position: absolute;
-    font-size: 24px;
-    filter: blur(2px);
-    color: white;
-    white-space: nowrap; /* Prevent text from wrapping */
-    font-family: Arial, sans-serif; /* Example font family */
-/*     padding: 30px 0px 30px 0px; */
+  position: absolute;
+  font-size: 24px;
+  filter: blur(2px);
+  color: white;
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-family: Arial, sans-serif; /* Example font family */
+  /*     padding: 30px 0px 30px 0px; */
 }
 
 .otp div div input {
-    width: 45px!important;
-    height: 45px;
-    background-color: transparent;
-    border: 1px solid rgb(107 114 128);
-    border-radius: 8px;
+  width: 45px !important;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid rgb(107 114 128);
+  border-radius: 8px;
 }
