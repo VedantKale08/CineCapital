@@ -4,23 +4,25 @@ const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 require("dotenv").config();
 const cors = require("cors");
+const connectDatabase = require("./config/connection");
 
 const app = express();
 const PORT = process.env.PORT || 3002;
 const MONGOURI = process.env.MONGOURI;
 
 // Connect to MongoDB
-mongoose.connect(MONGOURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect(MONGOURI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function () {
-  console.log("Connected to MongoDB");
-});
+// const db = mongoose.connection;
+// db.on("error", console.error.bind(console, "connection error:"));
+// db.once("open", function () {
+//   console.log("Connected to MongoDB");
+// });
 
+connectDatabase();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
