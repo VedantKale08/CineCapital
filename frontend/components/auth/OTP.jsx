@@ -40,7 +40,7 @@ function OTP({ setIsOTP, userMobileNo }) {
       <p className="text-2xl font-bold">Verify your Mobile Number</p>
 
       <p className="text-textSecondary text-sm text-center">
-        Enter OTP sent to +91 1234567890
+        Enter OTP sent to +91 {userMobileNo}
       </p>
       <div className="otp flex flex-col items-center mt-5">
         <OtpInput

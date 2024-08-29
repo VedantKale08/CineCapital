@@ -19,10 +19,10 @@ const actors = [
     url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/shah-rukh-khan-2092-12-09-2017-02-10-43.jpg",
   },
   {
-    name: "Aamir Khan",
+    name: "Kiara Advani",
     nationality: "Indian",
     industry: "Bollywood",
-    url: "https://imgs.search.brave.com/ga_osiajLKBMu8inv5qpgyCrnI2HGnvBIzCIdWiMZoQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9i/L2JkL0FhbWlyX0to/YW5fMjAxMy5qcGc",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/kiara-advani-1043272-1655467015.jpg",
   },
   {
     name: "Salman Khan",
@@ -39,10 +39,10 @@ const actors = [
 
   // Marathi Actors
   {
-    name: "Mahesh Manjrekar",
+    name: "Prajakta Mali",
     nationality: "Indian",
     industry: "Marathi",
-    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/mahesh-manjrekar-1327-1649141659.jpg",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/prajakta-mali-36635-1723209865.jpg",
   },
   {
     name: "Lalit Prabhakar",
@@ -77,10 +77,10 @@ const actors = [
     url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/rajinikanth-1795-29-12-2016-01-58-24.jpg",
   },
   {
-    name: "Kamal Haasan",
+    name: "Samantha Ruth Prabhu",
     nationality: "Indian",
     industry: "South Indian",
-    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/kamal-haasan-2886-24-03-2017-17-54-38.jpg",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/samantha-ruth-prabhu-36761-1680672597.jpg",
   },
   {
     name: "Allu Arjun",
@@ -95,10 +95,10 @@ const actors = [
     url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/prabhas-1708-1686915417.jpg",
   },
   {
-    name: "Mahesh Babu",
+    name: "Rashmika Mandanna",
     nationality: "Indian",
     industry: "South Indian",
-    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/mahesh-babu-36982-20-12-2017-04-21-05.jpg",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/rashmika-mandanna-1076783-28-12-2016-12-20-39.jpg",
   },
 ];
 
