@@ -24,7 +24,7 @@ function OTP({ setIsOTP, userMobileNo }) {
       if (data.status) {
         toast.success(data.message);
         setCookie("token", data.data.token);
-        router.push("/auth/onboard");
+        router.push("/home");
       } else if (data.statusCode) {
         toast.error(data.message);
         router.push("/auth/register");
