@@ -38,6 +38,60 @@ function Feed() {
       items: 1,
     },
   };
+
+  const languageArray = [
+    {
+      id: 1,
+      label: "हिन्दी",
+      font: "Noto Sans Devanagari, sans-serif",
+    },
+    {
+      id: 2,
+      label: "मराठी",
+      font: "Noto Sans Devanagari, sans-serif",
+    },
+    {
+      id: 3,
+      label: "English",
+      font: "Arial, sans-serif",
+    },
+    {
+      id: 4,
+      label: "தமிழ்",
+      font: "Noto Sans Tamil, sans-serif",
+    },
+    {
+      id: 5,
+      label: "తెలుగు",
+      font: "Noto Sans Telugu, sans-serif",
+    },
+    {
+      id: 6,
+      label: "ગુજરાતી",
+      font: "Noto Sans Gujarati, sans-serif",
+    },
+    {
+      id: 7,
+      label: "ಕನ್ನಡ",
+      font: "Noto Sans Kannada, sans-serif",
+    },
+    {
+      id: 8,
+      label: "മലയാളം",
+      font: "Noto Sans Malayalam, sans-serif",
+    },
+    {
+      id: 9,
+      label: "मराठी",
+      font: "Noto Sans Devanagari, sans-serif",
+    },
+    {
+      id: 10,
+      label: "English",
+      font: "Arial, sans-serif",
+    },
+  ];
+
   return (
     <div className="ml-[109px] h-full px-4 py-8 flex flex-col gap-12">
       <BannerCarousel />
@@ -106,6 +160,22 @@ function Feed() {
         </div>
       </div>
 
+      {/* Languages */}
+      <div className="flex flex-col gap-6">
+        <div className="flex justify-between text-white pr-8">
+          <p className="text-lg">Languages</p>
+          <p className="cursor-pointer underline underline-offset-2">See all</p>
+        </div>
+
+        <div className="grid grid-cols-5 gap-3">
+          {languageArray.map((data, index) => (
+            <div className="flex justify-center items-center bg-secondary relative h-24 rounded-md cursor-pointer overflow-hidden shadow-lg hover:shadow-xl hover:scale-110 border border-secondary hover:z-[999] hover:border-slate-500 transition-all">
+              <p className="text-white text-xl font-bold">{data?.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Latest */}
       <div className="flex flex-col gap-6">
         <div className="flex justify-between text-white pr-8">
@@ -114,10 +184,7 @@ function Feed() {
         </div>
 
         <div className="flex justify-center w-full">
-          <Carousel
-            responsive={responsive}
-            className="w-screen gap-2"
-          >
+          <Carousel responsive={responsive} className="w-screen gap-2">
             {slides.map((item, index) => (
               <div className="pr-8" key={index}>
                 <Image

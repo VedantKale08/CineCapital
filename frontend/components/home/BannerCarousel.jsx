@@ -1,7 +1,4 @@
 import React from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 
@@ -36,27 +33,6 @@ function BannerCarousel() {
     };
   return (
     <div>
-      {/* <Slider {...settings} className='w-[90vw]'>
-        <Image
-          src="/assets/rect_banner.avif"
-          width={0}
-          height={0}
-          className="h-80 rounded-lg"
-        />
-        <Image
-          src="/assets/rect_banner.avif"
-          width={0}
-          height={0}
-          className="h-80 rounded-lg"
-        />
-        <Image
-          src="/assets/rect_banner.avif"
-          width={0}
-          height={0}
-          className="h-80 rounded-lg"
-        />
-      </Slider> */}
-
       <Carousel
         responsive={responsive}
         showDots={true}
