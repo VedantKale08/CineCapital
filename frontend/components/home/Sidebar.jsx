@@ -12,7 +12,6 @@ import React, { useEffect, useState } from "react";
 
 function Sidebar() {
   const userDetails = userDetailsStore((state) => state.userDetails);
-  console.log("User details", userDetails);
   const navItems = [
     { id: 1, label: "Profile", icon: UserCircle2Icon, link: "" },
     { id: 2, label: "Search", icon: Search, link: "" },
@@ -29,8 +28,8 @@ function Sidebar() {
   }, []);
 
   return (
-    <div className="flex flex-col h-screen w-fit fixed left-0 top-0 z-50">
-      <p className="p-8 text-white">LOGO</p>
+    <div className="flex flex-col h-screen w-fit fixed left-0 top-0 z-50 ">
+      <p className="p-6 text-white font-semibold ">CP</p>
       <div className="flex-1 flex items-center">
         <ul className="flex flex-col gap-7 group">
           {navItems.map((item, index) => (
@@ -47,6 +46,7 @@ function Sidebar() {
               </span>
             </div>
           ))}
+          <div className="absolute top-0 -z-50 left-0 w-96 bg-gradient-to-r from-black to-transparent h-screen opacity-0 transform -translate-x-[60%] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700" />
         </ul>
       </div>
     </div>

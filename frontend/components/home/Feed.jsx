@@ -5,6 +5,7 @@ import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Triangle } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 function Feed() {
   const slides = [
@@ -92,6 +93,7 @@ function Feed() {
     },
   ];
 
+  const router = useRouter();
   return (
     <div className="ml-[109px] h-full px-4 py-8 flex flex-col gap-12">
       <BannerCarousel />
@@ -105,7 +107,7 @@ function Feed() {
         <div className="flex gap-4">
           <div className="border border-slate-800 p-4 rounded-md flex-1">
             <p>Deadpool & Wolverine</p>
-            <p className="flex text-green-500 gap-2 text-sm">
+            <p className="flex text-green-500 gap-2 text-sm items-center">
               25,241.90 <Triangle className="w-3 " fill="#22c55e" />{" "}
             </p>
             <p className="text-gray-400 text-sm">+83.20 (+0.40%) </p>
@@ -113,7 +115,7 @@ function Feed() {
 
           <div className="border border-slate-800 p-4 rounded-md flex-1">
             <p>Stree 2</p>
-            <p className="flex text-green-500 gap-2 text-sm">
+            <p className="flex text-green-500 gap-2 text-sm items-center">
               25,241.90 <Triangle className="w-3 " fill="#22c55e" />{" "}
             </p>
             <p className="text-gray-400 text-sm">+83.20 (+0.40%) </p>
@@ -121,7 +123,7 @@ function Feed() {
 
           <div className="border border-slate-800 p-4 rounded-md flex-1">
             <p>Aadipurush</p>
-            <p className="flex text-red-500 gap-2 text-sm">
+            <p className="flex text-red-500 gap-2 text-sm items-center">
               2,231.10 <Triangle className="w-3 rotate-180" fill="#ef4444" />{" "}
             </p>
             <p className="text-gray-400 text-sm">-23.20 (+0.40%) </p>
@@ -129,7 +131,7 @@ function Feed() {
 
           <div className="border border-slate-800 p-4 rounded-md flex-1">
             <p>Kill</p>
-            <p className="flex text-green-500 gap-2 text-sm">
+            <p className="flex text-green-500 gap-2 text-sm items-center">
               25,241.90 <Triangle className="w-3 " fill="#22c55e" />{" "}
             </p>
             <p className="text-gray-400 text-sm">+83.20 (+0.40%) </p>
@@ -141,13 +143,22 @@ function Feed() {
       <div className="flex flex-col gap-4">
         <div className="flex justify-between text-white pr-8">
           <p className="text-lg">Recommended Movies</p>
-          <p className="cursor-pointer underline underline-offset-2">See all</p>
+          <p
+            className="cursor-pointer underline underline-offset-2"
+            onClick={() => router.push("/movie-listing")}
+          >
+            See all
+          </p>
         </div>
 
         <div className="flex justify-center w-full">
           <Carousel responsive={responsive} className="w-screen gap-2">
             {slides.map((item, index) => (
-              <div className="pr-8" key={index}>
+              <div
+                className="pr-8"
+                key={index}
+                onClick={() => router.push("/movie")}
+              >
                 <Image
                   src={item}
                   width={0}
