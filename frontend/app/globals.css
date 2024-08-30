@@ -19,7 +19,7 @@ body {
     min-height: 100vh;
     color: white;
     margin: 0; /* Remove default margin */
-    overflow: hidden; /* Prevent scrolling if needed */
+   
 }
 
 .overlay-container {
