@@ -68,7 +68,7 @@ function Login() {
               onClick={handleOtp}
               disabled={mobileNo.length == 0}
               className={classNames(
-                "bg-blue  w-full rounded-md py-2.5 mt-5 hover:scale-105 transition",
+                "bg-blue w-full rounded-md py-2.5 mt-5 hover:scale-105 transition",
                 mobileNo.length != 10 && "bg-opacity-40"
               )}
             >

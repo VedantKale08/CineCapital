@@ -14,16 +14,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Toaster position="top-right" reverseOrder={false} />
-        <NextTopLoader color="#4983f6" />
-        <div
-        className="min-h-screen"
-          style={{
-            background: "url('/assets/stars.svg')",
-          }}
-        >
-          {children}
-        </div>
+          <Toaster position="top-right" reverseOrder={false} />
+          <NextTopLoader color="#4983f6" />
+          <div
+            className="min-h-screen"
+            style={{
+              background: "url('/assets/stars.svg')",
+            }}
+          >
+            {children}
+          </div>
       </body>
     </html>
   );
