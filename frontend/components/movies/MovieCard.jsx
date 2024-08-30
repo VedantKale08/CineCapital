@@ -16,8 +16,8 @@ const MovieCard = ({ item, index }) => {
         {/* Production House Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
           <p className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300 break-all text-center p-4 ">
-            <span className="text-sm">Produced By</span> <br />
-            <span className="font-semibold">{item.productionHouse}</span>
+            <span className="text-sm">Releasing In</span> <br />
+            <span className="font-semibold">{item.releaseYear}</span>
           </p>
         </div>
       </div>

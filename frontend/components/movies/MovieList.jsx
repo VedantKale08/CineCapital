@@ -16,7 +16,7 @@ const MovieList = () => {
     {
       title: "The Great Adventure",
       languages: ["English", "Hindi"],
-      releaseYear: 2022,
+      releaseYear: 2026,
       rating: "UA",
       imageUrl: "/assets/col1.jpg",
       productionHouse: "Adventure Studios",
@@ -24,7 +24,7 @@ const MovieList = () => {
     {
       title: "Comedy Night",
       languages: ["English"],
-      releaseYear: 2021,
+      releaseYear: 2028,
       rating: "UA",
       imageUrl: "/assets/col2.avif",
       productionHouse: "Laugh Out Loud Productions",
@@ -32,7 +32,7 @@ const MovieList = () => {
     {
       title: "Mystery Manor",
       languages: ["English", "French"],
-      releaseYear: 2020,
+      releaseYear: 2025,
       rating: "UA",
       imageUrl: "/assets/col3.png",
       productionHouse: "Mystery Films",
@@ -40,7 +40,7 @@ const MovieList = () => {
     {
       title: "Romantic Getaway",
       languages: ["Hindi"],
-      releaseYear: 2023,
+      releaseYear: 2024,
       rating: "UA",
       imageUrl: "/assets/col5.avif",
       productionHouse: "Love Stories Inc.",
@@ -48,7 +48,7 @@ const MovieList = () => {
     {
       title: "Thrill Seekers",
       languages: ["English", "Spanish"],
-      releaseYear: 2019,
+      releaseYear: 2030,
       rating: "UA",
       imageUrl: "/assets/col6.avif",
       productionHouse: "Thrill Studios",
@@ -56,7 +56,7 @@ const MovieList = () => {
     {
       title: "Comedy Night 2",
       languages: ["English"],
-      releaseYear: 2022,
+      releaseYear: 2027,
       rating: "UA",
       imageUrl: "/assets/col2.avif",
       productionHouse: "Laugh Out Loud Productions",
@@ -64,7 +64,7 @@ const MovieList = () => {
     {
       title: "Mystery Manor 2",
       languages: ["English", "French"],
-      releaseYear: 2021,
+      releaseYear: 2026,
       rating: "UA",
       imageUrl: "/assets/col3.png",
       productionHouse: "Mystery Films",
@@ -72,7 +72,7 @@ const MovieList = () => {
     {
       title: "Romantic Getaway 2",
       languages: ["Hindi"],
-      releaseYear: 2024,
+      releaseYear: 2028,
       rating: "UA",
       imageUrl: "/assets/col5.avif",
       productionHouse: "Love Stories Inc.",
@@ -80,7 +80,7 @@ const MovieList = () => {
     {
       title: "Thrill Seekers 2",
       languages: ["English", "Spanish"],
-      releaseYear: 2020,
+      releaseYear: 2025,
       rating: "UA",
       imageUrl: "/assets/col6.avif",
       productionHouse: "Thrill Studios",
@@ -88,7 +88,7 @@ const MovieList = () => {
     {
       title: "Thrill Seekers",
       languages: ["English", "Spanish"],
-      releaseYear: 2019,
+      releaseYear: 2027,
       rating: "UA",
       imageUrl: "/assets/col6.avif",
       productionHouse: "Thrill Studios",
@@ -96,7 +96,7 @@ const MovieList = () => {
     {
       title: "Comedy Night 2",
       languages: ["English"],
-      releaseYear: 2022,
+      releaseYear: 2031,
       rating: "UA",
       imageUrl: "/assets/col2.avif",
       productionHouse: "Laugh Out Loud Productions",
@@ -104,7 +104,7 @@ const MovieList = () => {
     {
       title: "Mystery Manor 2",
       languages: ["English", "French"],
-      releaseYear: 2021,
+      releaseYear: 2028,
       rating: "UA",
       imageUrl: "/assets/col3.png",
       productionHouse: "Mystery Films",
@@ -112,7 +112,7 @@ const MovieList = () => {
     {
       title: "The Great Adventure",
       languages: ["English", "Hindi"],
-      releaseYear: 2022,
+      releaseYear: 2029,
       rating: "UA",
       imageUrl: "/assets/col1.jpg",
       productionHouse: "Adventure Studios",
@@ -120,7 +120,7 @@ const MovieList = () => {
     {
       title: "Comedy Night",
       languages: ["English"],
-      releaseYear: 2021,
+      releaseYear: 2024,
       rating: "UA",
       imageUrl: "/assets/col2.avif",
       productionHouse: "Laugh Out Productions",
@@ -128,7 +128,7 @@ const MovieList = () => {
     {
       title: "Mystery Manor",
       languages: ["English", "French"],
-      releaseYear: 2020,
+      releaseYear: 2032,
       rating: "UA",
       imageUrl: "/assets/col3.png",
       productionHouse: "Mystery Films",
