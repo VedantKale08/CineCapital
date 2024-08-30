@@ -9,111 +9,96 @@ const actors = [
   {
     name: "Amitabh Bachchan",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Amitabh_Bachchan_in_2010.jpg/800px-Amitabh_Bachchan_in_2010.jpg",
     industry: "Bollywood",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/amitabh-bachchan-138-12-09-2017-02-34-37.jpg",
   },
   {
     name: "Shah Rukh Khan",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Shah_Rukh_Khan_in_2015.jpg/800px-Shah_Rukh_Khan_in_2015.jpg",
     industry: "Bollywood",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/shah-rukh-khan-2092-12-09-2017-02-10-43.jpg",
   },
   {
-    name: "Aamir Khan",
+    name: "Kiara Advani",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Aamir_Khan_at_2016_Red_Sea_International_Film_Festival.jpg/800px-Aamir_Khan_at_2016_Red_Sea_International_Film_Festival.jpg",
     industry: "Bollywood",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/kiara-advani-1043272-1655467015.jpg",
   },
   {
     name: "Salman Khan",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Salman_Khan_2016.jpg/800px-Salman_Khan_2016.jpg",
     industry: "Bollywood",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/salman-khan-1991-12-09-2017-01-53-43.jpg",
   },
   {
     name: "Deepika Padukone",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Deepika_Padukone_2013.jpg/800px-Deepika_Padukone_2013.jpg",
     industry: "Bollywood",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/deepika-padukone-2822-12-09-2017-06-31-43.jpg",
   },
 
   // Marathi Actors
   {
-    name: "Mahesh Manjrekar",
+    name: "Prajakta Mali",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Mahesh_Manjrekar_in_2014.jpg/800px-Mahesh_Manjrekar_in_2014.jpg",
     industry: "Marathi",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/prajakta-mali-36635-1723209865.jpg",
   },
   {
     name: "Lalit Prabhakar",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Lalit_Prabhakar_in_2015.jpg/800px-Lalit_Prabhakar_in_2015.jpg",
     industry: "Marathi",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/lalit-prabhakar-1069608-21-05-2019-10-56-18.jpg",
   },
   {
     name: "Swwapnil Joshi",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Swwapnil_Joshi_2017.jpg/800px-Swwapnil_Joshi_2017.jpg",
     industry: "Marathi",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/swwapnil-joshi-4734-24-03-2017-12-31-12.jpg",
   },
   {
     name: "Sonali Kulkarni",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Sonali_Kulkarni_2016.jpg/800px-Sonali_Kulkarni_2016.jpg",
     industry: "Marathi",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/sonali-kulkarni-2195-17-12-2018-03-41-25.jpg",
   },
   {
     name: "Jitendra Joshi",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Jitendra_Joshi_2017.jpg/800px-Jitendra_Joshi_2017.jpg",
     industry: "Marathi",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/jitendra-joshi-5938-1698301675.jpg",
   },
 
   // South Indian Actors
   {
     name: "Rajinikanth",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Rajinikanth_2012.jpg/800px-Rajinikanth_2012.jpg",
     industry: "South Indian",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/rajinikanth-1795-29-12-2016-01-58-24.jpg",
   },
   {
-    name: "Kamal Haasan",
+    name: "Samantha Ruth Prabhu",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Kamal_Haasan_at_Filmfare_Awards_2018.jpg/800px-Kamal_Haasan_at_Filmfare_Awards_2018.jpg",
     industry: "South Indian",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/samantha-ruth-prabhu-36761-1680672597.jpg",
   },
   {
     name: "Allu Arjun",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Allu_Arjun_2017.jpg/800px-Allu_Arjun_2017.jpg",
     industry: "South Indian",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/allu-arjun-125-03-10-2016-01-55-06.jpg",
   },
   {
     name: "Prabhas",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Prabhas_2017.jpg/800px-Prabhas_2017.jpg",
     industry: "South Indian",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/prabhas-1708-1686915417.jpg",
   },
   {
-    name: "Mahesh Babu",
+    name: "Rashmika Mandanna",
     nationality: "Indian",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Mahesh_Babu_at_MAHESH_BABU%27S_SAREE_SAMARPANAM.jpg/800px-Mahesh_Babu_at_MAHESH_BABU%27S_SAREE_SAMARPANAM.jpg",
     industry: "South Indian",
+    url: "https://in.bmscdn.com/iedb/artist/images/website/poster/large/rashmika-mandanna-1076783-28-12-2016-12-20-39.jpg",
   },
 ];
 

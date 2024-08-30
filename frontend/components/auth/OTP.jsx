@@ -24,7 +24,7 @@ function OTP({ setIsOTP, userMobileNo }) {
       if (data.status) {
         toast.success(data.message);
         setCookie("token", data.data.token);
-        router.push("/auth/onboard");
+        router.push("/home");
       } else if (data.statusCode) {
         toast.error(data.message);
         router.push("/auth/register");
@@ -40,7 +40,7 @@ function OTP({ setIsOTP, userMobileNo }) {
       <p className="text-2xl font-bold">Verify your Mobile Number</p>
 
       <p className="text-textSecondary text-sm text-center">
-        Enter OTP sent to +91 1234567890
+        Enter OTP sent to +91 {userMobileNo}
       </p>
       <div className="otp flex flex-col items-center mt-5">
         <OtpInput

@@ -1,4 +1,5 @@
 "use client";
+import { userDetailsStore } from "@/store/userStore";
 import {
   FolderKanbanIcon,
   HelpCircle,
@@ -10,6 +11,8 @@ import {
 import React, { useEffect, useState } from "react";
 
 function Sidebar() {
+  const userDetails = userDetailsStore((state) => state.userDetails);
+  console.log("User details", userDetails);
   const navItems = [
     { id: 1, label: "Profile", icon: UserCircle2Icon, link: "" },
     { id: 2, label: "Search", icon: Search, link: "" },
@@ -34,7 +37,7 @@ function Sidebar() {
             <div
               key={index}
               onClick={() => setActiveTab(item.id)}
-              className={`flex items-center gap-6 py-2 px-8 cursor-pointer transition-all hover:scale-110 ${
+              className={`flex items-center gap-6 py-2 px-6 cursor-pointer transition-all hover:scale-110 ${
                 activeTab == item.id ? "text-white font-bold" : "text-gray-500"
               } hover:text-white hover:font-bold`}
             >

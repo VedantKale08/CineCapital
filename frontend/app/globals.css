@@ -26,7 +26,6 @@ body {
   min-height: 100vh;
   color: white;
   margin: 0; /* Remove default margin */
-  /* overflow: hidden; */
 }
 
 .overlay-container {
@@ -84,10 +83,7 @@ body {
 }
 
 .sidebar_gradient {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-  );
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%);
 }
 
 .sidebar_gradient:hover {
@@ -99,14 +95,14 @@ body {
   );
 }
 
-.react-multi-carousel-dot--active button{
-  background: white!important;
+.react-multi-carousel-dot--active button {
+  background: white !important;
   border: 0;
 }
 
-.react-multi-carousel-dot button{
+.react-multi-carousel-dot button {
   background: gray;
-  border: 0!important;
-  width: 8px!important;
-  height: 8px!important;
+  border: 0 !important;
+  width: 8px !important;
+  height: 8px !important;
 }

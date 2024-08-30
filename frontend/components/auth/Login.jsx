@@ -48,7 +48,7 @@ function Login() {
                   +91
                 </div>
                 <input
-                  type="number"
+                  type="tel"
                   maxLength={10}
                   id="input-label"
                   class="py-3 px-4 block w-full border border-gray-500 rounded-lg text-sm focus:border-gray-500 focus:ring-gray-500 disabled:opacity-50 disabled:pointer-events-none bg-transparent  dark:text-neutral-400 dark:placeholder-neutral-500 "

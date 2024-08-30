@@ -138,8 +138,16 @@ const register = async (req, res) => {
 };
 
 const getUser = async (req, res) => {
-  const users = await User.findOne({ _id: req?.user?._id });
-  res.status(200).send(users);
+  try {
+    const user = await User.findOne({ _id: req?.user?._id })
+      .populate("investmentInterests.Actors")
+      .populate("investmentInterests.Genres");
+
+    res.status(200).send(user);
+  } catch (error) {
+    console.error("Error fetching user:", error);
+    res.status(500).send({ error: "Failed to fetch user data" });
+  }
 };
 
 const fetchInterests = async (req, res) => {
