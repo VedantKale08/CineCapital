@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import MovieCard from "./MovieCard";
 import MovieFilter from "./GenreFilter";
+import ParentLayout from "../layouts/ParentLayout";
 
 const MovieList = () => {
   const movies = [
@@ -178,8 +179,9 @@ const MovieList = () => {
   const [showLangs, setShowLangs] = useState(true);
 
   return (
-    <div className="ml-[109px] h-full px-4 py-8 flex gap-12">
-      <Sidebar />
+    <ParentLayout>
+      {/* <div className="ml-[109px] h-full px-4 py-8 flex gap-12"> */}
+      {/* <Sidebar /> */}
       <div className="flex flex-col gap-8">
         <MovieFilter
           data={genres}
@@ -198,7 +200,8 @@ const MovieList = () => {
           return <MovieCard item={item} index={index} />;
         })}
       </div>
-    </div>
+      {/* </div> */}
+    </ParentLayout>
   );
 };
 
