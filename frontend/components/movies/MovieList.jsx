@@ -14,6 +14,7 @@ import MovieFilter from "./GenreFilter";
 const MovieList = () => {
   const movies = [
     {
+      id: 1001,
       title: "The Great Adventure",
       languages: ["English", "Hindi"],
       releaseYear: 2026,
@@ -22,6 +23,7 @@ const MovieList = () => {
       productionHouse: "Adventure Studios",
     },
     {
+      id: 1002,
       title: "Comedy Night",
       languages: ["English"],
       releaseYear: 2028,
@@ -30,6 +32,7 @@ const MovieList = () => {
       productionHouse: "Laugh Out Loud Productions",
     },
     {
+      id: 1003,
       title: "Mystery Manor",
       languages: ["English", "French"],
       releaseYear: 2025,
@@ -38,6 +41,7 @@ const MovieList = () => {
       productionHouse: "Mystery Films",
     },
     {
+      id: 1004,
       title: "Romantic Getaway",
       languages: ["Hindi"],
       releaseYear: 2024,
@@ -46,6 +50,7 @@ const MovieList = () => {
       productionHouse: "Love Stories Inc.",
     },
     {
+      id: 1005,
       title: "Thrill Seekers",
       languages: ["English", "Spanish"],
       releaseYear: 2030,
@@ -54,6 +59,7 @@ const MovieList = () => {
       productionHouse: "Thrill Studios",
     },
     {
+      id: 1006,
       title: "Comedy Night 2",
       languages: ["English"],
       releaseYear: 2027,
@@ -62,6 +68,7 @@ const MovieList = () => {
       productionHouse: "Laugh Out Loud Productions",
     },
     {
+      id: 1007,
       title: "Mystery Manor 2",
       languages: ["English", "French"],
       releaseYear: 2026,
@@ -70,6 +77,7 @@ const MovieList = () => {
       productionHouse: "Mystery Films",
     },
     {
+      id: 1008,
       title: "Romantic Getaway 2",
       languages: ["Hindi"],
       releaseYear: 2028,
@@ -78,6 +86,7 @@ const MovieList = () => {
       productionHouse: "Love Stories Inc.",
     },
     {
+      id: 1009,
       title: "Thrill Seekers 2",
       languages: ["English", "Spanish"],
       releaseYear: 2025,
@@ -86,6 +95,7 @@ const MovieList = () => {
       productionHouse: "Thrill Studios",
     },
     {
+      id: 1010,
       title: "Thrill Seekers",
       languages: ["English", "Spanish"],
       releaseYear: 2027,
@@ -94,6 +104,7 @@ const MovieList = () => {
       productionHouse: "Thrill Studios",
     },
     {
+      id: 1011,
       title: "Comedy Night 2",
       languages: ["English"],
       releaseYear: 2031,
@@ -102,6 +113,7 @@ const MovieList = () => {
       productionHouse: "Laugh Out Loud Productions",
     },
     {
+      id: 1012,
       title: "Mystery Manor 2",
       languages: ["English", "French"],
       releaseYear: 2028,
@@ -110,6 +122,7 @@ const MovieList = () => {
       productionHouse: "Mystery Films",
     },
     {
+      id: 1013,
       title: "The Great Adventure",
       languages: ["English", "Hindi"],
       releaseYear: 2029,
@@ -118,6 +131,7 @@ const MovieList = () => {
       productionHouse: "Adventure Studios",
     },
     {
+      id: 1014,
       title: "Comedy Night",
       languages: ["English"],
       releaseYear: 2024,
@@ -126,6 +140,7 @@ const MovieList = () => {
       productionHouse: "Laugh Out Productions",
     },
     {
+      id: 1015,
       title: "Mystery Manor",
       languages: ["English", "French"],
       releaseYear: 2032,

@@ -9,17 +9,18 @@ import { useRouter } from "next/navigation";
 
 function Feed() {
   const slides = [
-    "/assets/col1.jpg",
-    "/assets/col2.avif",
-    "/assets/col3.png",
-    "/assets/col5.avif",
-    "/assets/col6.avif",
-    "/assets/col2.avif",
-    "/assets/col3.png",
-    "/assets/col5.avif",
-    "/assets/col6.avif",
-    "/assets/col6.avif",
+    { id: 1, url: "/assets/col1.jpg", name: "Slide 1" },
+    { id: 2, url: "/assets/col2.avif", name: "Slide 2" },
+    { id: 3, url: "/assets/col3.png", name: "Slide 3" },
+    { id: 4, url: "/assets/col5.avif", name: "Slide 4" },
+    { id: 5, url: "/assets/col6.avif", name: "Slide 5" },
+    { id: 6, url: "/assets/col2.avif", name: "Slide 6" },
+    { id: 7, url: "/assets/col3.png", name: "Slide 7" },
+    { id: 8, url: "/assets/col5.avif", name: "Slide 8" },
+    { id: 9, url: "/assets/col6.avif", name: "Slide 9" },
+    { id: 10, url: "/assets/col6.avif", name: "Slide 10" },
   ];
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -157,10 +158,10 @@ function Feed() {
               <div
                 className="pr-8"
                 key={index}
-                onClick={() => router.push("/movie")}
+                onClick={() => router.push(`/movie/${item.id}`)}
               >
                 <Image
-                  src={item}
+                  src={item.url}
                   width={0}
                   height={0}
                   className="w-fit rounded-md cursor-pointer"
@@ -175,7 +176,7 @@ function Feed() {
       <div className="flex flex-col gap-6">
         <div className="flex justify-between text-white pr-8">
           <p className="text-lg">Languages</p>
-          <p className="cursor-pointer underline underline-offset-2">See all</p>
+          {/* <p className="cursor-pointer underline underline-offset-2">See all</p> */}
         </div>
 
         <div className="grid grid-cols-5 gap-3">
@@ -197,9 +198,13 @@ function Feed() {
         <div className="flex justify-center w-full">
           <Carousel responsive={responsive} className="w-screen gap-2">
             {slides.map((item, index) => (
-              <div className="pr-8" key={index}>
+              <div
+                className="pr-8"
+                key={index}
+                onClick={() => router.push(`/movie/${item.id}`)}
+              >
                 <Image
-                  src={item}
+                  src={item.url}
                   width={0}
                   height={0}
                   className="w-fit rounded-md cursor-pointer"

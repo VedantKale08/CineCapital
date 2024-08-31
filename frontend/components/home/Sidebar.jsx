@@ -8,6 +8,7 @@ import {
   TrendingUp,
   UserCircle2Icon,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 function Sidebar() {
@@ -22,6 +23,7 @@ function Sidebar() {
   ];
 
   const [activeTab, setActiveTab] = useState();
+  const router = useRouter();
 
   useEffect(() => {
     setActiveTab(3);
@@ -29,7 +31,12 @@ function Sidebar() {
 
   return (
     <div className="flex flex-col h-screen w-fit fixed left-0 top-0 z-50 ">
-      <p className="p-6 text-white font-semibold ">CP</p>
+      <p
+        className="p-6 text-white font-semibold cursor-pointer"
+        onClick={() => router.push("/home")}
+      >
+        CP
+      </p>
       <div className="flex-1 flex items-center">
         <ul className="flex flex-col gap-7 group">
           {navItems.map((item, index) => (

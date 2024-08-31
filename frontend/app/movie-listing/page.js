@@ -2,7 +2,7 @@ import MovieList from "@/components/movies/MovieList";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-main">
       <MovieList />
     </div>
   );

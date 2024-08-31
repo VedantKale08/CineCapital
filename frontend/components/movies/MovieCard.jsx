@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const MovieCard = ({ item, index }) => {
+  const router = useRouter();
   return (
     <div key={index} className="relative group overflow-hidden rounded-2xl">
       <div className="relative">
@@ -22,7 +24,10 @@ const MovieCard = ({ item, index }) => {
         </div>
       </div>
 
-      <div className="p-4">
+      <div
+        className="p-4 cursor-pointer"
+        onClick={() => router.push(`/movie/${item.id}`)}
+      >
         <p>{item.title}</p>
         <p className="text-sm text-gray-400">{item.rating}</p>
         <div>

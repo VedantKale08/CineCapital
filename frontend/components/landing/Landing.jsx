@@ -137,7 +137,7 @@ const Landing = () => {
 
       <div className="flex flex-col items-center">
         <div className="z-30 bg-main">
-          <p className="text-4xl mt-64 font-bold">Get Started...</p>
+          <p className="text-4xl mt-64 font-bold text-center">Get Started...</p>
           <p className="mt-4 font-semibold">
             #Empowering Stories, Maximizing Returns
           </p>
