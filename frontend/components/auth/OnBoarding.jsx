@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { postRequest } from "@/config/axiosIntercepter";
+import { updateInterests } from "@/constants/apiEndPoints";
+import { getCookie } from "cookies-next";
+import toast from "react-hot-toast";
 
 function OnBoarding({ genreData, actorsData }) {
   const genreArray = [
@@ -85,54 +89,52 @@ function OnBoarding({ genreData, actorsData }) {
 
   const languageArray = [
     {
-      id: 1,
+      _id: 1,
       url: "/assets/languages/hindi.png",
-      label: "हिन्दी",
+      title: "Hindi",
+      name: "हिन्दी",
     },
     {
-      id: 2,
+      _id: 2,
       url: "/assets/languages/marathi.png",
-      label: "मराठी",
+      title: "Marathi",
+      name: "मराठी",
     },
     {
-      id: 3,
+      _id: 3,
       url: "/assets/languages/english.png",
-      label: "English",
+      title: "English",
+      name: "English",
     },
     {
-      id: 4,
+      _id: 4,
       url: "/assets/languages/tamil.png",
-      label: "தமிழ்",
+      title: "Tamil",
+      name: "தமிழ்",
     },
     {
-      id: 5,
+      _id: 5,
       url: "/assets/languages/404.png",
-      label: "తెలుగు", //telugu
+      title: "Telugu",
+      name: "తెలుగు", //telugu
     },
     {
-      id: 6,
+      _id: 6,
       url: "/assets/languages/english.png",
-      label: "ગુજરાતી",
+      title: "Gujrati",
+      name: "ગુજરાતી",
     },
     {
-      id: 7,
+      _id: 7,
       url: "/assets/languages/404.png",
-      label: "ಕನ್ನಡ",
+      title: "Hindi",
+      name: "ಕನ್ನಡ",
     },
     {
-      id: 8,
+      _id: 8,
       url: "/assets/languages/tamil.png",
-      label: "മലയാളം",
-    },
-    {
-      id: 9,
-      url: "/assets/languages/marathi.png",
-      label: "मराठी",
-    },
-    {
-      id: 10,
-      url: "/assets/languages/english.png",
-      label: "English",
+      title: "Malyalam",
+      name: "മലയാളം",
     },
   ];
 
@@ -196,26 +198,56 @@ function OnBoarding({ genreData, actorsData }) {
   const router = useRouter();
 
   const handleGenres = (item) => {
-    if (genres.includes(item.id)) {
-      setGenres((prev) => prev.filter((genreId) => genreId !== item.id));
+    if (genres.includes(item._id)) {
+      setGenres((prev) => prev.filter((genreId) => genreId !== item._id));
     } else if (genres.length < 3) {
-      setGenres((prev) => [...prev, item.id]);
+      setGenres((prev) => [...prev, item._id]);
     }
   };
 
   const handleLanguage = (item) => {
-    if (language.includes(item.id)) {
-      setLanguage((prev) => prev.filter((genreId) => genreId !== item.id));
+    if (language.includes(item._id)) {
+      setLanguage((prev) => prev.filter((langId) => langId !== item._id));
     } else if (language.length < 3) {
-      setLanguage((prev) => [...prev, item.id]);
+      setLanguage((prev) => [...prev, item._id]);
     }
   };
 
   const handleActors = (item) => {
-    if (actors.includes(item.id)) {
-      setActors((prev) => prev.filter((actorId) => actorId !== item.id));
+    if (actors.includes(item._id)) {
+      setActors((prev) => prev.filter((actorId) => actorId !== item._id));
     } else if (actors.length < 3) {
-      setActors((prev) => [...prev, item.id]);
+      setActors((prev) => [...prev, item._id]);
+    }
+  };
+
+  const submitInterests = async () => {
+    const selectedLanguageNames = language
+      .map((langId) => {
+        const lang = languageArray.find((l) => l._id === langId);
+        return lang ? lang.title : null;
+      })
+      .filter((title) => title !== null);
+
+    try {
+      const response = await postRequest({
+        url: updateInterests,
+        body: {
+          favouriteGenres: genres,
+          favouriteLanguages: selectedLanguageNames,
+          favouriteActors: actors,
+        },
+        token: getCookie("token"),
+      });
+      const data = response.data;
+      if (data.message) {
+        toast.success(data.message);
+        router.push("/home");
+      } else {
+        console.error("Failed to update interests");
+      }
+    } catch (error) {
+      console.error("Error updating interests:", error);
     }
   };
 
@@ -258,7 +290,7 @@ function OnBoarding({ genreData, actorsData }) {
         {tab === 1 && (
           <>
             <div className="grid grid-cols-5 gap-4">
-              {language.map((item) => (
+              {languageArray.map((item) => (
                 <div key={item.id} onClick={() => handleLanguage(item)}>
                   <Card data={item} selectedData={language} isSmall={true} />
                 </div>
@@ -287,7 +319,7 @@ function OnBoarding({ genreData, actorsData }) {
             </div>
             {actors.length === 3 && (
               <button
-                onClick={() => router.push("/home")}
+                onClick={submitInterests}
                 className="bg-blue w-[20%] rounded-md py-2.5 mt-5 place-self-end flex justify-center hover:scale-105 transition"
               >
                 Finish

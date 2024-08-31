@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,17 +14,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari&family=Noto+Sans+Tamil&family=Noto+Sans+Telugu&family=Noto+Sans+Gujarati&family=Noto+Sans+Kannada&family=Noto+Sans+Malayalam&display=swap" rel="stylesheet"/>
+      </Head>
       <body className={inter.className}>
-        <Toaster position="top-right" reverseOrder={false} />
-        <NextTopLoader color="#4983f6" />
-        <div
-        className="min-h-screen"
-          style={{
-            background: "url('/assets/stars.svg')",
-          }}
-        >
-          {children}
-        </div>
+          <Toaster position="top-right" reverseOrder={false} />
+          <NextTopLoader color="#4983f6" />
+          <div
+            className="min-h-screen"
+            style={{
+              background: "url('/assets/stars.svg')",
+            }}
+          >
+            {children}
+          </div>
       </body>
     </html>
   );

@@ -27,6 +27,7 @@
     "react-rating": "^2.0.5",
     "react-rating-stars-component": "^2.2.0",
     "react-star-ratings": "^2.3.0",
+    "react-multi-carousel": "^2.8.5",
     "reactjs-otp-input": "^2.0.10",
     "zustand": "^4.5.5"
   },
