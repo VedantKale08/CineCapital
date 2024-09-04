@@ -1,4 +1,5 @@
-export const hostUrl = "http://localhost:3001/api";
+// export const hostUrl = "http://localhost:3001/api";
+export const hostUrl = "https://cinecapital-1.onrender.com/api";
 
 // Get
 export const sendOtp = "/send-otp/";
