@@ -197,7 +197,7 @@ const MovieList = () => {
       </div>
       <div className="grid grid-cols-5 gap-6">
         {movies.map((item, index) => {
-          return <MovieCard item={item} index={index} />;
+          return <MovieCard item={item} index={index} key={index} />;
         })}
       </div>
       {/* </div> */}

@@ -181,7 +181,10 @@ function Feed() {
 
         <div className="grid grid-cols-5 gap-3">
           {languageArray.map((data, index) => (
-            <div className="flex justify-center items-center bg-secondary relative h-24 rounded-md cursor-pointer overflow-hidden shadow-lg hover:shadow-xl hover:scale-110 border border-secondary hover:z-[999] hover:border-slate-500 transition-all">
+            <div
+              key={index}
+              className="flex justify-center items-center bg-secondary relative h-24 rounded-md cursor-pointer overflow-hidden shadow-lg hover:shadow-xl hover:scale-110 border border-secondary hover:z-[999] hover:border-slate-500 transition-all"
+            >
               <p className="text-white text-xl font-bold">{data?.label}</p>
             </div>
           ))}
